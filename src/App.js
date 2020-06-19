@@ -27,7 +27,7 @@ function send_mail(e) {
   const data = { Name: name, Subject: subject, Email: email,Message: message };
   var csrftoken = getCookie('csrftoken');
 
-  fetch('http://127.0.0.1:8000/codeerit', {
+  fetch('http://kamilkowicz.pythonanywhere.com/codeerit', {
     method: 'POST', // or 'PUT'
     headers: {
       'Content-Type': 'application/json',
