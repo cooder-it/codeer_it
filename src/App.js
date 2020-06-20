@@ -31,13 +31,8 @@ function send_mail(e) {
   e.preventDefault()
   const data = { Name: name, Subject: subject, Email: email,Message: message };
   var csrftoken = getCookie('csrftoken');
-<<<<<<< HEAD
   console.log(JSON.stringify(data))
   fetch('http://127.0.0.1:8000/codeerit', {
-=======
-
-  fetch('https://kamilkowicz.pythonanywhere.com/codeerit', {
->>>>>>> a97ec392b7bb568040fc80c0a30f79dc8e8917de
     method: 'POST', // or 'PUT'
     headers: {
       'Content-Type': 'application/json',
@@ -58,38 +53,38 @@ function App() {
     <div className="wrapper">
       <nav>
         <ul>
-          <li><div className="logo"><img src={logo}/></div></li>
-          <li><a href="">Work</a></li>
-          <li><a href="">About</a></li>
-          <li><a href="">Let's talk</a></li>
+          <li><div className="logo"><img src={logo} alt="logo"/></div></li>
+          <li><a href="#work" >Work</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#lettalk">Let's talk</a></li>
         </ul>
       </nav>
       <main>
-        <div className="Work">
+        <div className="Work" id="work">
           <div>
             <span>design</span><br/>
             <span>& technology</span><br/>
             <span>Minimalism is the ultimate form of sophistication.</span>
           </div>
-          <div><img src={mainpic}/></div>
+          <div><img src={mainpic} alt="biznes"/></div>
         </div>
 
-        <div className="About">
+        <div className="About" id="about">
           <span>Who we are ?</span>
           <div className="members">
             <div>
-              <img src={gosia}/>
+              <img src={gosia} alt="gosia_img"/>
               <p>Gosia</p>
               <p>graphic designer, ilustrator and illustration lover focused on UI/UX learning. She try connects traditional art techniques with digital</p>
             </div>
             <div>
-              <img src={kamil}/>
+              <img src={kamil} alt="kamil_img"/>
               <p>Kamil</p>
               <p>bioinformatician with passion for coding, who studies at Poznań University of Technology. Web technologies are in his interes with pixel-perfect solutions</p>
             </div>
 				  </div>
 			  </div>
-        <div className="letsTalk">
+        <div className="letsTalk" id="lettalk">
           <h2>Let's talk!</h2>
           <p>Feel free, write to us contact@codeer.it and tell as more about your project</p>
         </div>
