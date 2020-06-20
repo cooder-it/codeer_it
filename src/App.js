@@ -31,8 +31,13 @@ function send_mail(e) {
   e.preventDefault()
   const data = { Name: name, Subject: subject, Email: email,Message: message };
   var csrftoken = getCookie('csrftoken');
+<<<<<<< HEAD
   console.log(JSON.stringify(data))
   fetch('http://127.0.0.1:8000/codeerit', {
+=======
+
+  fetch('https://kamilkowicz.pythonanywhere.com/codeerit', {
+>>>>>>> a97ec392b7bb568040fc80c0a30f79dc8e8917de
     method: 'POST', // or 'PUT'
     headers: {
       'Content-Type': 'application/json',
