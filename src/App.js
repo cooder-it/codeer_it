@@ -93,13 +93,28 @@ function App() {
           <span>Poznań 2020</span>
         </footer>
       </main>
-      <form onSubmit={send_mail} action="" method="POST">
+      <form name="contact" method="POST" data-netlify="true">
+      <p>
+        <label>Your Name: <input type="text" name="name" /></label>   
+      </p>
+      <p>
+        <label>Your Email: <input type="email" name="email" /></label>
+      </p>
+      <p>
+        <label>Message: <textarea name="message"></textarea></label>
+      </p>
+      <p>
+        <button type="submit">Send</button>
+      </p>
+    </form>
+
+      {/* <form onSubmit={send_mail} action="" method="POST">
           <input type="text" name="Name" placeholder="name"/>
           <input type="text" name="Subject" placeholder="subject"/>
           <input type="text" name="Email" placeholder="email"/>
           <input type="text" name="Message" placeholder="message"/>
           <button type="submit">Send</button>
-      </form>
+      </form> */}
       </div>
     </>
   );
