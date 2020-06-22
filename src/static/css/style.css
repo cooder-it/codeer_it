@@ -13,37 +13,41 @@ body {
 }
 /*MENU*/
 nav {
-	margin: 7% 0%;
+	margin: 5% 0% 9%;
 }
 nav ul {
 	display: flex;
 	height: 100%;
 }
 nav ul li {
-	flex-basis: 17%;
+	flex-basis: 19%;
 	list-style: none;
-	padding: 9px 15px;
+	padding: 1% 2%;
 }
 nav ul li:nth-child(1) {
-	flex-basis: 50%;
+	flex-basis: 45%;
 	text-align: center;
 }
 nav ul li a {
 	display: block;
-	transform: translateY(50%);
+	/* transform: translateY(50%); */
 	text-decoration: none;
 	color: black;
 }
+nav ul li a {
+	padding: 1vw 2vw;
+	min-width: 126px;
+}
+nav ul li:nth-last-child(1) {
+	padding:1vw ;
+}
 nav ul li:nth-last-child(1) a {
-	transform: translateY(0%);
 	background-color: black;
-	padding: 13px 32px;
 	color: white;
 }
-
 .logo {
-	height: 60px;
-	width: 120px;
+	height: 8vh;
+	width: 8vw;
 }
 .logo img {
 	width: 100%;
@@ -58,31 +62,38 @@ nav ul li:nth-last-child(1) a {
 	width: 84%;
 }
 
-.Work div:nth-child(1) {
-	position: absolute;
-	bottom: 26%;
-	z-index: 1;
+.Work div {
+	position: relative;
+	right: -42%;
+	height: 100%;
 }
-.Work div:nth-child(1) span:nth-child(1) {
+.Work div img {
+	height: 26vw;
+	width:  60vw;
+}
+.Work div div {
+	position: absolute;
+	top: 22%;
+	left: -49%;
+}
+.Work div span:nth-child(1) {
+  	font-size: 7.2vw;
+	line-height: 5vh;
 	-webkit-text-stroke-width: 2px; 
     -webkit-text-stroke-color: black; 
 	color: #F7F4EF;
-  	font-size: 110px;
-	line-height: 50px;
 }
-.Work div:nth-child(1) span:nth-child(3) {
-	font-size: 110px;
-	line-height: 158px;
+.Work div span:nth-child(3) {
+	font-size: 7.2vw;
+	  line-height: 20vh;
 }
-.Work div:nth-child(2) img {
-	height: 100%;
-	width: 100%;
-	transform: translateX(48%);
+.Work div span:nth-child(5) {
+	font-size: 1.3vw;
 }
 .About {
 	width: 92%;
 	position: relative;
-	padding: 160px 0px 260px 0px;
+	padding: 18% 0px 26% 0px;
 }
 .About span {
 	display: block;
@@ -91,25 +102,28 @@ nav ul li:nth-last-child(1) a {
     color: #F7F4EF;
 	position: absolute;
 	z-index: 1;
-	font-size: 84px;
+	font-size: 5.6vw;
 	transform-origin: bottom;
 	transform: rotate(90deg);
 	top: 55%;
 	right: -32%;
 	line-height: 20px;
 }
+.name {
+	font-weight: 600;
+}
 .members {
-	margin: 20px;
+	margin: 2vh;
 	display: grid;
 	grid-template-columns: 1fr 1fr; 
 	grid-column-gap: 14%;
 }
 .members div img {
-	width: 96%;
-	height: 80%;
+	width: 24vw;
+	height: 32vh;
 }
 .letsTalk {
-	padding: 50px 0px 30px 0px;
+	padding: 5% 0px 3% 0px;
 	background-color: black;
 	width: 150%;
 	transform: translateX(-15%);
@@ -135,4 +149,137 @@ footer span {
 }
 footer span:nth-child(2) {
 	text-align: right;
+}
+@media (max-width: 800px) {
+	.logo {
+		height: 14vw;
+		width: 23vw;
+	}
+	.wrapper {
+		width: 88%;
+		margin-left: 6%;
+	}
+	nav {
+		margin: 10% 0% 9%;
+	}
+	nav ul {
+		display: flex;
+		height: 100%;
+	}
+	nav ul li:nth-child(2) {
+		display: none;
+	}
+	nav ul li:nth-child(3) {
+		display: none;
+	}
+	nav ul li {
+		padding: 0;
+	}
+	nav ul li:nth-child(1) {
+		flex-basis: 70%;
+		text-align: center;
+	}
+	nav ul li a {
+		display: block;
+		color: black;
+	}
+	nav ul li a {
+		padding: 2vw 3vw;
+		min-width: 126px;
+	}
+	nav ul li:nth-last-child(1) {
+		padding:1vw ;
+	}
+	nav ul li:nth-last-child(1) a {
+		background-color: black;
+		color: white;
+	}
+	.attach {
+		position: relative;
+	}
+	.attach span {
+		position: absolute;
+		-webkit-text-stroke-width: 1px; 
+		-webkit-text-stroke-color: black; 
+		color: #F7F4EF;
+		z-index: 1;
+		font-size: 8vw;
+		transform-origin: center;
+		transform: rotate(90deg);
+		top: 36%;
+		right: -34%;
+		line-height: 0%;
+	}
+
+	.Work div {
+		width: 84%;
+	}
+	.Work div {
+		position: static;
+		right: 0%;
+		width: 100%;
+		height: 100%;
+	}
+	.Work div img {
+		height: 40vh;
+		width:  100vw;
+		transform: translateX(-5%);
+	}
+	.Work div div {
+		position: static;
+		top: 0%;
+		left: 0%;
+		margin-bottom: 4%;
+	}
+	.Work div span:nth-child(1) {
+		font-size: 11vw;
+		line-height: 4vh;
+		-webkit-text-stroke-width: 1px; 
+		-webkit-text-stroke-color: black; 
+		color: #F7F4EF;
+	}
+	.Work div span:nth-child(3) {
+		font-size: 11vw;
+		line-height: 9vh;
+	}
+	.Work div span:nth-child(5) {
+		font-size: 3vw;
+		line-height: 3vh;
+	}
+	.members {
+		display: grid;
+		margin: 0;
+		grid-template-columns: 1fr; 
+		grid-column-gap: 14%;
+	}
+	.members p {
+		max-width: 74vw;
+	}
+	.members div {
+		margin: 6% 0;
+	}
+	.members div img {
+		margin-bottom: 2%;
+		width: 74vw;
+		height: 45vw;
+	}
+	.letsTalk {
+		padding: 5% 0px 3% 0px;
+		background-color: black;
+		width: 150%;
+		transform: translateX(-15%);
+	}
+	.letsTalk h2 {
+		font-size: 13vw;
+		line-height: 14vw;
+		margin-left: 14.5%;
+		color: white;
+	}
+	.letsTalk p {
+		color: white;
+		width: 70%;
+		line-break: auto;
+		font-size: 4.7vw;
+		margin: 1% auto;
+	}
 }

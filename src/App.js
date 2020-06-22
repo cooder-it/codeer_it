@@ -61,53 +61,55 @@ function App() {
       </nav>
       <main>
         <div className="Work" id="work">
-          <div>
-            <span>design</span><br/>
-            <span>& technology</span><br/>
-            <span>Minimalism is the ultimate form of sophistication.</span>
-          </div>
-          <div><img src={mainpic} alt="biznes"/></div>
+            <div>  
+              <div>     
+                <span>design</span><br/>
+                <span>& technology</span><br/>
+                <span>Minimalism is the ultimate form of sophistication.</span>
+              </div>
+              <img src={mainpic} alt="biznes"/>  
+            </div> 
         </div>
 
         <div className="About" id="about">
-          <span>Who we are ?</span>
           <div className="members">
-            <div>
+            <div className="attach">
+              <span>Who we are ?</span>
               <img src={gosia} alt="gosia_img"/>
-              <p>Gosia</p>
+              <p className="name">Gosia</p>
               <p>graphic designer, ilustrator and illustration lover focused on UI/UX learning. She try connects traditional art techniques with digital</p>
             </div>
             <div>
               <img src={kamil} alt="kamil_img"/>
-              <p>Kamil</p>
+              <p className="name">Kamil</p>
               <p>bioinformatician with passion for coding, who studies at Poznań University of Technology. Web technologies are in his interes with pixel-perfect solutions</p>
             </div>
 				  </div>
 			  </div>
         <div className="letsTalk" id="lettalk">
-          <h2>Let's talk!</h2>
-          <p>Feel free, write to us contact@codeer.it and tell as more about your project</p>
+          <h2>Let's talk !</h2>
+          <p>Feel free, write to us and tell as more about your project</p>
+          <form name="contact" method="post">
+            <input type="hidden" name="form-name" value="contact" />
+            <p>
+              <label>Your Name: <input type="text" name="name"/></label>
+            </p>
+            <p>
+              <label>Your Email: <input type="email" name="email"/></label>
+            </p>
+            <p>
+              <label>Message: <textarea name="message"></textarea></label>
+            </p>
+            <p>
+              <button type="submit">Send</button>
+            </p>
+        </form>
         </div>
         <footer>
           <span>Codeer</span>
           <span>Poznań 2020</span>
         </footer>
       </main>
-      <form name="contact" method="post">
-          <input type="hidden" name="form-name" value="contact" />
-          <p>
-            <label>Your Name: <input type="text" name="name"/></label>
-          </p>
-          <p>
-            <label>Your Email: <input type="email" name="email"/></label>
-          </p>
-          <p>
-            <label>Message: <textarea name="message"></textarea></label>
-          </p>
-          <p>
-            <button type="submit">Send</button>
-          </p>
-        </form>
 
       {/* <form onSubmit={send_mail} action="" method="POST">
           <input type="text" name="Name" placeholder="name"/>
