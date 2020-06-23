@@ -130,6 +130,13 @@ nav ul li i {
 	grid-template-columns: 1fr 1fr; 
 	grid-column-gap: 14%;
 }
+.gosia_portfolio {
+	display: block;
+	text-decoration: none;
+	color: black;
+	margin-top: 3%;
+	font-weight: 600;
+}
 .members div img {
 	width: 24vw;
 	height: 32vh;

@@ -57,6 +57,7 @@ export default class Main extends React.Component {
                     <img src={gosia} alt="gosia_img"/>
                     <p className="name">Gosia</p>
                     <p>graphic designer, ilustrator and illustration lover focused on UI/UX learning. She try connects traditional art techniques with digital</p>
+                    <p><a className="gosia_portfolio" href="https://mbalas.myportfolio.com/">Portfolio</a></p>
                     </div>
                     <div>
                     <img src={kamil} alt="kamil_img"/>
