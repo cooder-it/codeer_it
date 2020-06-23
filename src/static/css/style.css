@@ -17,33 +17,37 @@ nav {
 }
 nav ul {
 	display: flex;
+	justify-content: flex-end;
 	height: 100%;
 }
 nav ul li {
-	flex-basis: 19%;
+	flex-basis: 20%;
 	list-style: none;
 	padding: 1% 2%;
 }
 nav ul li:nth-child(1) {
-	flex-basis: 45%;
-	text-align: center;
+	flex-basis: 40%;
 }
 nav ul li a {
+	transition: .08s;
 	display: block;
 	/* transform: translateY(50%); */
 	text-decoration: none;
 	color: black;
+	padding: 1vw 1.7vw;
+	min-width: 150px;
+	border: 1px solid transparent;
 }
-nav ul li a {
-	padding: 1vw 2vw;
-	min-width: 126px;
-}
-nav ul li:nth-last-child(1) {
-	padding:1vw ;
+nav ul li a:hover {
+	font-weight: 500;
 }
 nav ul li:nth-last-child(1) a {
 	background-color: black;
 	color: white;
+}
+nav ul li i {
+	margin-left: 12%;
+	font-size: 1.1vw;
 }
 .logo {
 	height: 8vh;
@@ -58,6 +62,10 @@ nav ul li:nth-last-child(1) a {
 	margin-left: 15%;
 }
 /*MENU END*/
+@keyframes main_description {
+	from { transform: translateX(50px); opacity: 0; }
+	to 	 { transform: translateX(0px); opacity: 1;  }
+}
 .Work div {
 	width: 84%;
 }
@@ -82,13 +90,17 @@ nav ul li:nth-last-child(1) a {
 	-webkit-text-stroke-width: 2px; 
     -webkit-text-stroke-color: black; 
 	color: #F7F4EF;
+	opacity: 0;
 }
 .Work div span:nth-child(3) {
 	font-size: 7.2vw;
-	  line-height: 20vh;
+	line-height: 20vh;
+	opacity: 0;
 }
 .Work div span:nth-child(5) {
 	font-size: 1.3vw;
+	opacity: 0;
+	
 }
 .About {
 	width: 92%;
@@ -123,21 +135,57 @@ nav ul li:nth-last-child(1) a {
 	height: 32vh;
 }
 .letsTalk {
+	display: flex;
 	padding: 5% 0px 3% 0px;
 	background-color: black;
 	width: 150%;
 	transform: translateX(-15%);
 }
-.letsTalk h2 {
-	font-size: 115px;
+.letsTalk div {
+	flex-basis: 50%;
+	margin-left: 8%;
+	transform: translateX(0%);
+}
+.letsTalk div h2 {
+	-webkit-text-stroke-width: 2px; 
+    -webkit-text-stroke-color: white; 
+	font-size: 6vw;
 	font-weight: 300;
 	line-height: 100px;
 	margin-left: 14.5%;
-	color: white;
+	color: black;
 }
-.letsTalk p {
+.letsTalk div p {
 	color: white;
 	margin: 1% 15%;
+}
+.letsTalk form {
+	flex-basis: 60%;
+}
+.form {
+	display: flex;
+	flex-direction: column;
+}
+.form * {
+	margin: 0.5%;
+}
+.form label * {
+	width: 60%;
+	padding: 1%;
+}
+.form button {
+	transition: .2s;
+	width: 16%;
+	margin-left: 22.8%;
+	padding: 1%;
+	background-color: black;
+	color: white;
+	border: white 2px solid;
+	cursor: pointer;
+}
+.form button:hover {
+	color: black;
+	background-color: white;
 }
 footer {
 	padding: 20px 0px;
@@ -151,6 +199,9 @@ footer span:nth-child(2) {
 	text-align: right;
 }
 @media (max-width: 800px) {
+	nav ul li i {
+		font-size: 2.5vw;
+	}
 	.logo {
 		height: 14vw;
 		width: 23vw;
@@ -184,8 +235,8 @@ footer span:nth-child(2) {
 		color: black;
 	}
 	nav ul li a {
-		padding: 2vw 3vw;
-		min-width: 126px;
+		padding: 2vw 1.2vw;
+		min-width: 146px;
 	}
 	nav ul li:nth-last-child(1) {
 		padding:1vw ;
@@ -264,22 +315,66 @@ footer span:nth-child(2) {
 		height: 45vw;
 	}
 	.letsTalk {
+		overflow: hidden;
 		padding: 5% 0px 3% 0px;
 		background-color: black;
-		width: 150%;
+		width: 130%;
 		transform: translateX(-15%);
-	}
-	.letsTalk h2 {
-		font-size: 13vw;
-		line-height: 14vw;
-		margin-left: 14.5%;
-		color: white;
 	}
 	.letsTalk p {
 		color: white;
-		width: 70%;
+		width: 100%;
 		line-break: auto;
 		font-size: 4.7vw;
-		margin: 1% auto;
+		margin: 0% 0%;
+	}
+	.letsTalk {
+		display: flex;
+		flex-direction: column;
+		padding: 6% 0% 7% 0%;
+		background-color: black;
+		width: 130%;
+		transform: translateX(-15%);
+	}
+	.letsTalk div {
+		flex-basis: 50%;
+		margin-left: 0%;
+		transform: translateX(0%);
+	}
+	.letsTalk div h2 {
+		-webkit-text-stroke-width: 0px; 
+		font-size: 14vw;
+		font-weight: 300;
+		line-height: 100px;
+		margin-left: 15%;
+		color: white;
+	}
+	.letsTalk div p {
+		color: white;
+		width: 80%;
+		margin: 1% 15%;
+		font-size: 3.vw;
+	}
+	.letsTalk form {
+		flex-basis: 50%;
+	}
+	.form {
+		display: flex;
+		flex-direction: column;
+	}
+	.form * {
+		margin: 0.5%;
+		flex-basis: 10%;
+	}
+	.form label * {
+		width: 77%;
+		margin-left: 15%;
+		padding: 1%;
+	}
+	.form button {
+		width: 16%;
+		margin: 4% 2% 2% 45%;
+		padding: 2%;
+		font-size: 4.1vw;
 	}
 }

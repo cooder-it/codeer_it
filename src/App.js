@@ -1,10 +1,12 @@
 import React from 'react';
 import "./static/css/style.css"
-import logo from "./static/images/Przezroczysty.jpg"
-import mainpic from "./static/images/img.jpg"
-import gosia from "./static/images/ja@2x.jpg"
-import kamil from "./static/images/ja@1x.jpg"
-
+import Portfolio from "./portfolio"
+import {
+  Switch,
+  Route,
+} from "react-router-dom";
+import Main from './Main.js'
+import { AnimatePresence } from 'framer-motion'
 
 // function getCookie(name) {
 //   var cookieValue = null;
@@ -50,75 +52,16 @@ import kamil from "./static/images/ja@1x.jpg"
 function App() {
   return (
     <>
-    <div className="wrapper">
-      <nav>
-        <ul>
-          <li><div className="logo"><img src={logo} alt="logo"/></div></li>
-          <li><a href="#work" >Work</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#lettalk">Let's talk</a></li>
-        </ul>
-      </nav>
-      <main>
-        <div className="Work" id="work">
-            <div>  
-              <div>     
-                <span>design</span><br/>
-                <span>& technology</span><br/>
-                <span>Minimalism is the ultimate form of sophistication.</span>
-              </div>
-              <img src={mainpic} alt="biznes"/>  
-            </div> 
-        </div>
-
-        <div className="About" id="about">
-          <div className="members">
-            <div className="attach">
-              <span>Who we are ?</span>
-              <img src={gosia} alt="gosia_img"/>
-              <p className="name">Gosia</p>
-              <p>graphic designer, ilustrator and illustration lover focused on UI/UX learning. She try connects traditional art techniques with digital</p>
-            </div>
-            <div>
-              <img src={kamil} alt="kamil_img"/>
-              <p className="name">Kamil</p>
-              <p>bioinformatician with passion for coding, who studies at Poznań University of Technology. Web technologies are in his interes with pixel-perfect solutions</p>
-            </div>
-				  </div>
-			  </div>
-        <div className="letsTalk" id="lettalk">
-          <h2>Let's talk !</h2>
-          <p>Feel free, write to us and tell as more about your project</p>
-          <form name="contact" method="post">
-            <input type="hidden" name="form-name" value="contact" />
-            <p>
-              <label>Your Name: <input type="text" name="name"/></label>
-            </p>
-            <p>
-              <label>Your Email: <input type="email" name="email"/></label>
-            </p>
-            <p>
-              <label>Message: <textarea name="message"></textarea></label>
-            </p>
-            <p>
-              <button type="submit">Send</button>
-            </p>
-        </form>
-        </div>
-        <footer>
-          <span>Codeer</span>
-          <span>Poznań 2020</span>
-        </footer>
-      </main>
-
-      {/* <form onSubmit={send_mail} action="" method="POST">
-          <input type="text" name="Name" placeholder="name"/>
-          <input type="text" name="Subject" placeholder="subject"/>
-          <input type="text" name="Email" placeholder="email"/>
-          <input type="text" name="Message" placeholder="message"/>
-          <button type="submit">Send</button>
-      </form> */}
-      </div>
+      <AnimatePresence>
+        <Switch>
+          <Route exact path="/">
+            <Main/>
+          </Route>
+          <Route path="/work">
+            <Portfolio/>
+          </Route>
+        </Switch>
+      </AnimatePresence>
     </>
   );
 }

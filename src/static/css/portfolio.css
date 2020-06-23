@@ -1,0 +1,26 @@
+.portfolio_site h2 {
+    font-size: 5vw;
+    width: 100%;
+    text-align: center;
+}
+button {
+    transition: .2s;
+    margin-top: 3%;
+    width: 11%;
+    padding: 0%;
+    margin-left: 44.5%;
+    background-color: white;
+    border:1px solid black ;
+}
+button a {
+    transition: .2s;
+    text-decoration: none;
+    color: black;
+    font-size: 2vw;
+}
+button:hover {
+    background-color: black;
+}
+button:hover a {
+    color: white;
+}
