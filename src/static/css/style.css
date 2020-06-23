@@ -198,7 +198,7 @@ footer span {
 footer span:nth-child(2) {
 	text-align: right;
 }
-@media (max-width: 800px) {
+@media (max-width: 660px) {
 	nav ul li i {
 		font-size: 2.5vw;
 	}
