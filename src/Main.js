@@ -35,7 +35,7 @@ export default class Main extends React.Component {
                 <li><div className="logo"><img src={logo} alt="logo"/></div></li>
                 <li><NavLink to="/work">Work</NavLink></li>
                 <li><a href="#about">About</a></li>
-                <li><a href="#lettalk">Let's talk<i className="fas fa-long-arrow-alt-right"></i></a></li>
+                <li><a href="#contact">Let's talk<i className="fas fa-long-arrow-alt-right"></i></a></li>
                 </ul>
             </nav>
             <main>
@@ -65,7 +65,7 @@ export default class Main extends React.Component {
                     </div>
                         </div>
                     </div>
-                <div className="letsTalk" id="lettalk">
+                <div className="letsTalk" id="contact">
                     <div>
                         <h2>Let's talk !</h2>
                         <p>Feel free, write to us and tell as more about your project</p>
