@@ -6,22 +6,24 @@ import mainpic from "./static/images/img.jpg"
 import gosia from "./static/images/ja@2x.jpg"
 import kamil from "./static/images/ja@1x.jpg"
 import { motion } from "framer-motion"
+import { gsap } from 'gsap'
 
 export default class Main extends React.Component {
 
     componentDidMount()
     {
-        var design_str = document.querySelector('.Work div span:nth-child(1)')
-        var technol_str = document.querySelector('.Work div span:nth-child(3)')
-        var minimalism_str = document.querySelector('.Work div span:nth-child(5)')
-        const tab = [design_str, technol_str, minimalism_str]
-        tab.forEach((item, index)=>{
-            item.style.display   = "block"
-            item.style.animation = `main_description 1.6s ${index/2}s`
-            item.onanimationend = () => {
-                item.style.opacity = "1"
-            }
-        })
+        // var design_str = document.querySelector('.Work div span:nth-child(1)')
+        // var technol_str = document.querySelector('.Work div span:nth-child(3)')
+        // var minimalism_str = document.querySelector('.Work div span:nth-child(5)')
+        // const tab = [design_str, technol_str, minimalism_str]
+        // tab.forEach((item, index)=>{
+        //     item.style.display   = "block"
+        //     // item.style.animation = `main_description 1.6s ${index/2}s`
+        //     // item.onanimationend = () => {
+        //     //     item.style.opacity = "1"
+        //     // }
+        // })
+        gsap.from(".description", {opacity: 0, x: 100, duration: 1.8, stagger: 0.8});
     }
     render() {
         return(
@@ -42,30 +44,30 @@ export default class Main extends React.Component {
                 <div className="Work" id="work">
                     <div>  
                     <div>     
-                        <span>design</span><br/>
-                        <span>& technology</span><br/>
-                        <span>Minimalism is the ultimate form of sophistication.</span>
+                        <span className="description">design</span><br/>
+                        <span className="description">& technology</span><br/>
+                        <span className="description">Minimalism is the ultimate form of sophistication.</span>
                     </div>
                     <img src={mainpic} alt="biznes"/>  
                     </div> 
                 </div>
 
                 <div className="About" id="about">
-                <div className="members">
-                    <div className="attach">
-                    <span>Who we are ?</span>
-                    <img src={gosia} alt="gosia_img"/>
-                    <p className="name">Gosia</p>
-                    <p>graphic designer, ilustrator and illustration lover focused on UI/UX learning. She try connects traditional art techniques with digital</p>
-                    <p><a className="gosia_portfolio" href="https://mbalas.myportfolio.com/">Portfolio</a></p>
-                    </div>
-                    <div>
-                    <img src={kamil} alt="kamil_img"/>
-                    <p className="name">Kamil</p>
-                    <p>bioinformatician with passion for coding, who studies at Poznań University of Technology. Web technologies are in his interes with pixel-perfect solutions</p>
-                    </div>
+                    <div className="members">
+                        <div className="attach">
+                            <span>Who we are ?</span>
+                            <img src={gosia} alt="gosia_img"/>
+                            <p className="name">Gosia</p>
+                            <p>graphic designer, ilustrator and illustration lover focused on UI/UX learning. She try connects traditional art techniques with digital</p>
+                            <p><a className="gosia_portfolio" href="https://mbalas.myportfolio.com/">Portfolio</a></p>
+                        </div>
+                        <div>
+                            <img src={kamil} alt="kamil_img"/>
+                            <p className="name">Kamil</p>
+                            <p>bioinformatician with passion for coding, who studies at Poznań University of Technology. Web technologies are in his interes with pixel-perfect solutions</p>
                         </div>
                     </div>
+                </div>
                 <div className="letsTalk" id="contact">
                     <div>
                         <h2>Let's talk !</h2>
@@ -84,8 +86,8 @@ export default class Main extends React.Component {
                     </form>
                 </div>
                 <footer>
-                <span>Codeer</span>
-                <span>Poznań 2020</span>
+                    <span>Codeer</span>
+                    <span>Poznań 2020</span>
                 </footer>
             </main>
         </div>
